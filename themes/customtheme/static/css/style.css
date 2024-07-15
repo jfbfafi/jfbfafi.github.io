@@ -1,0 +1,287 @@
+/*JETBRAINS MONO*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'JetBrainsMono-Regular';
+  src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+}
+
+/* LAYOUT */
+
+html {
+  background-color: #161925;
+  scroll-behavior: smooth;
+
+}
+
+/* Customizes the scrollbar in Firefox */
+body {
+  scrollbar-width: thin;
+  /* Can be "auto", "thin", or "none" */
+  scrollbar-color: #222222 #f1f1f1;
+  /* Thumb and track color */
+}
+
+a {
+  text-decoration: none;
+  font-family: 'JetBrainsMono-Regular';
+  color: #50FA7B;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 5em;
+}
+
+.footer-github {
+  padding-right: 5px;
+}
+
+
+/* .site-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items:center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.title {
+  margin-right: auto;
+  font-size: 1.1em;
+} */
+
+/* .sections {
+  display: inline-block;
+}
+
+.sections a {
+  display: flex;
+  padding: 5px;
+  margin: 0 5px;
+  
+} */
+
+.site-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+
+.sections a {
+  text-decoration: none;
+}
+
+
+.sections {
+  display: flex;
+  gap: 20px;
+}
+
+a:hover {
+  color: #ddd;
+}
+
+.sections a {
+  position: relative;
+}
+
+.sections a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FF5555;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.sections a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.title {
+  margin-right: auto;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+.index-content {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-title {
+  font-family: 'JetBrainsMono-Regular';
+  color: #50FA7B;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.index-presentation {
+  font-family: 'JetBrainsMono-Regular';
+  color: #50FA7B;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 0.8em;
+}
+
+.list-title,
+.post-snippet {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'JetBrainsMono-Regular';
+
+
+}
+
+.post-snippet {
+  margin-top: 0.5em;
+}
+
+.list-title {
+  margin-top: 2em;
+  font-style: italic;
+  color: #BD93F9;
+}
+
+
+/*single.html*/
+
+.single-content {
+  height: fit-content;
+  max-width: 800px;
+  font-family: 'JetBrainsMono-Regular';
+  margin: auto;
+  width: 50%;
+  color: #F8F8F2;
+}
+
+.single-content-title {
+  margin-top: 50px;
+  color: #FF206E;
+}
+
+pre {
+  overflow-x: auto;
+  margin: 24px 0 24px 0;
+  padding: 5px 0 0 5px;
+}
+
+
+code {
+  font-family: 'JetBrainsMono-Regular';
+  font-weight: bolder;
+  overflow-x: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+pre code {
+  margin: 0 3em 0 3em;
+}
+
+/* Images */
+img {
+  border: 1px solid #BD93F9;
+  max-width: 100%;
+  margin: 24px 0 24px 0;
+}
+
+figure {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+}
+
+figure img {
+  max-height: 500px;
+}
+
+
+h2,
+h3,
+h4 {
+  margin: 24px 0 24px 0;
+}
+
+blockquote {
+  border: 2px solid #50FA7B;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0;
+  font-style: italic;
+  text-shadow: 1px 1px #F1FA8C;
+  overflow-x: scroll;
+}
+
+
+
+/* Responsive section for small screen like mobile devices */
+
+@media screen and (max-width: 662px) {
+  
+  .site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em 0;
+    line-height: 2.5em;
+  }
+
+  .sections a {
+    font-size: 14px;
+    text-align: center;
+  } 
+  
+  .sections a:hover {
+    color: #ddd;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+
+
+  .index-title {
+    margin: 50px 10px 0 10px;
+    font-size: 25px;
+  }
+
+  .index-presentation {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .single-content {
+    width: 80%;
+  }
+
+}

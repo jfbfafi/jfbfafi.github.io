@@ -1,0 +1,57 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = ' fafi '
+theme = 'customtheme' 
+
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "writeups"
+    name = "Writeups"
+    url = "/writeups/"
+    weight = 20
+  
+  [[menu.main]]
+    identifier = "labs"
+    name = "labs"
+    url = "/labs/"
+    weight = 30
+  
+  [[menu.main]]
+    identifier = "sisops"
+    name = "Sisops"
+    url = "/sisops/"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "networking"
+    name = "Networking"
+    url = "/networking/"
+    weight = 50
+
+
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'dracula'
+    tabWidth = 4
+
+

@@ -1,0 +1,31 @@
+<header class="site-header">
+
+<nav>
+  <div>
+    <a href="/" class="title">
+          {{ if not .Site.Params.HeaderTitle }}
+           {{ .Site.Title }}
+          {{ else }}
+           {{ .Site.Params.HeaderTitle}}
+          
+          {{ end }}
+    </a>
+  </div>
+  
+  
+  <div class="sections">
+            {{ $currentPage := . }}
+            {{ $active := "" }}
+            {{ range .Site.Menus.main }}
+            {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+            {{ $active = "active" }}
+            {{ end }}
+            <a  href="{{ .URL }}" title="{{ .Title }}">
+                {{- .Name -}}
+            </a>
+            {{ end }}
+  </div>
+
+</nav>
+
+</header>
