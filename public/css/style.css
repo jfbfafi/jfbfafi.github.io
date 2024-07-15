@@ -239,10 +239,37 @@ blockquote {
   margin: 0;
   font-style: italic;
   text-shadow: 1px 1px #F1FA8C;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 
+/*404 PAGE*/
+
+.not-found-title {
+  text-align: center;
+  margin-top: 1.1em;
+  color: #FF5555;
+  font-size: 100px;
+  font-family: 'JetBrainsMono-Regular';
+  font-weight: bolder;
+}
+
+.not-found-description {
+  margin-top: 0.5em;
+  text-align: center;
+  color: #FF5555;
+  font-size: 40px;
+  font-family: 'JetBrainsMono-Regular'
+}
+
+.not-found-link {
+  text-decoration: underline;
+  color: #BD93F9;
+  font-style: oblique;
+  text-align: center;
+  margin-top: 2em;
+  font-weight: 700;
+}
 
 /* Responsive section for small screen like mobile devices */
 
@@ -282,6 +309,14 @@ blockquote {
   
   .single-content {
     width: 80%;
+  }
+
+  .not-found-title {
+    font-size: 40px;
+  }
+
+  .not-found-description {
+    font-size: 20px;
   }
 
 }
