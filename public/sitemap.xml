@@ -8,9 +8,17 @@
   </url><url>
     <loc>http://localhost:4444/categories/</loc>
   </url><url>
+    <loc>http://localhost:4444/posts/intro-networking/</loc>
+  </url><url>
+    <loc>http://localhost:4444/posts/intro-sisops/</loc>
+  </url><url>
     <loc>http://localhost:4444/labs/</loc>
   </url><url>
     <loc>http://localhost:4444/labs/maldoc101-cyberdefenders/</loc>
+  </url><url>
+    <loc>http://localhost:4444/posts/</loc>
+  </url><url>
+    <loc>http://localhost:4444/posts/procesos-sisops/</loc>
   </url><url>
     <loc>http://localhost:4444/tags/</loc>
   </url><url>

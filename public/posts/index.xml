@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on  fafi </title>
+    <link>http://localhost:4444/posts/</link>
+    <description>Recent content in Posts on  fafi </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:4444/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducción a redes de computadoras</title>
+      <link>http://localhost:4444/posts/intro-networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4444/posts/intro-networking/</guid>
+      <description>Qué es una red de computadoras? Una red de computadoras es un conjunto de nodos o dispositivos informáticos interconectados que intercambian datos y recursos entre sí. Puede establecerse utilizando medios por cable o inalámbricos, y protocolos de comunicación como TCP/IP.&#xA;Dispositivos Cliente Un cliente es un componente de hardware o software que se conecta a un servidor y utiliza algunos de sus servicios o recursos disponibles.&#xA;Servidor Un servidor es un componente de hardware o software que procesa peticiones y entrega datos a otro ordenador a través de Internet o de una red local.</description>
+    </item>
+    <item>
+      <title>Introducción a Sistemas Operativos</title>
+      <link>http://localhost:4444/posts/intro-sisops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4444/posts/intro-sisops/</guid>
+      <description>Kernel vs Distribución Un kernel (núcleo) es una parte de un sistema operativo donde están implementadas las funcionalidades básicas del mismo.&#xA;Una distribución (distro) es el kernel con aplicaciones instaladas encima de este y otras configuraciones específicas.&#xA;¿Qué es un sistema operativo? Es un programa de software que cumple las siguientes funcionalidades:&#xA;Administrador de recursos (Memoria,CPU,programas en ejecución) Administrador de la seguridad Interfaz entre computadora y usuario Se autoadministra Estructura de un sistema El usuario final solo ejecuta programas que usan recursos asignados por el sistema operativo.</description>
+    </item>
+    <item>
+      <title>Procesos - Sistemas Operativos</title>
+      <link>http://localhost:4444/posts/procesos-sisops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4444/posts/procesos-sisops/</guid>
+      <description>¿Qué es un programa? Un programa es un archivo que contiene un conjunto de instrucciones compiladas a código máquina con el propósito de construir un proceso en memoria.&#xA;¿Qué es un proceso? Un proceso es la instancia de un programa en ejecución. Es la unidad de trabajo de un sistema operativo. Componentes de un proceso: Conjunto de instrucciones (código). Espacio de direcciones de memoria. Conjunto de datos (variables, stack). Estado (activo, preparado, terminado, etc).</description>
+    </item>
+  </channel>
+</rss>

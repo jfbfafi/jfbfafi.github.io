@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>Labs |  fafi </title>
+	<title>Procesos - Sistemas Operativos |  fafi </title>
     
 
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -60,22 +60,49 @@
 
 
 
-<h3 class="list-title">Labs</h3>
+<div class="single-content">
+    
+    <h3 class="single-content-title">Procesos - Sistemas Operativos</h3>
 
+    <h2 id="qué-es-un-programa">¿Qué es un programa?</h2>
+<p>Un programa es un <strong>archivo</strong> que contiene un conjunto de instrucciones compiladas a código máquina con el propósito de construir un proceso en memoria.</p>
+<h2 id="qué-es-un-proceso">¿Qué es un proceso?</h2>
+<ul>
+<li>Un proceso es la instancia de un <strong>programa en ejecución</strong>.</li>
+<li>Es la unidad de trabajo de un sistema operativo.</li>
+<li>Componentes de un proceso:
+<ul>
+<li>Conjunto de instrucciones (código).</li>
+<li>Espacio de direcciones de memoria.</li>
+<li>Conjunto de datos (variables, stack).</li>
+<li>Estado (activo, preparado, terminado, etc).</li>
+<li>Atributos que lo identifican (process id, parent process id, user id).</li>
+<li>Recursos asignados (archivos, sockets, etc).</li>
+<li>Uno o más hilos de Ejecución (threads).</li>
+</ul>
+</li>
+</ul>
+<h2 id="imagen-de-proceso">Imagen de proceso</h2>
+<p><img src="/images/posts/sisops/imgdeproceso.png" alt="imagen de proceso"></p>
+<h3 id="el-stack-y-el-heap-son-de-tamaño-variable-mientras-que-los-otros-segmentos-no-además-crecen-en-sentido-opuesto">El stack y el heap son de tamaño variable mientras que los otros segmentos no. Además crecen en sentido opuesto.</h3>
+<ul>
+<li>El <strong>heap</strong> empieza al principio del espacio de direcciones y crece hacia direcciones superiores de memoria.</li>
+<li>El <strong>stack</strong> empieza al final del espacio de direcciones y crece hacia direcciones inferiores de memoria.</li>
+</ul>
+<h2 id="pcb-process-control-block">PCB (Process Control Block)</h2>
+<p>Es una estructura manejada por el sistema operativo que almacena el <strong>contexto de ejecución de un proceso</strong> y permite identificarlo de otros procesos.</p>
+<h3 id="componentes-de-un-pcb">Componentes de un PCB:</h3>
+<ul>
+<li>Identificadores (PID, PPID, UID),</li>
+<li>Estado de los registros del procesador.</li>
+<li>Estado (READY,RUNNING, etc).</li>
+<li>Prioridad de ejecución.</li>
+<li>Tiempo en CPU.</li>
+<li>Punteros a segmentos de código, datos, heap.</li>
+<li>Recursos correspondientes: archivos, sockets, semáforos, etc.</li>
+</ul>
 
-
-
-<article class="post-snippet">
-  <h5>
-    <a href="/labs/grabthephisher-cyberdefenders/">GrabThePhisher - Cyberdefenders (Easy)</a>
-  </h5>
-</article>
-
-<article class="post-snippet">
-  <h5>
-    <a href="/labs/maldoc101-cyberdefenders/">MalDoc101 - Cyberdefenders (Medium)</a>
-  </h5>
-</article>
+</div>
 
 
 <footer>

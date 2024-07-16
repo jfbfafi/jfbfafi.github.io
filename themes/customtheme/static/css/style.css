@@ -27,6 +27,18 @@ body {
   /* Thumb and track color */
 }
 
+ul {
+  list-style-position: inside;
+}
+
+ul li {
+  margin: 15px 0 15px 0;
+}
+
+ul li li{
+  margin-left: 24px;
+}
+
 a {
   text-decoration: none;
   font-family: 'JetBrainsMono-Regular';
