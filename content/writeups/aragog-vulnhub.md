@@ -321,7 +321,3 @@ Horcruxes Hidden in this VM: 2 horcruxes
 You have successfully pwned Aragog machine.
 Here is your second hocrux: horcrux_{MjogbWFSdm9MbyBHYVVudCdzIHJpTmcgZGVTdHJPeWVkIGJZIERVbWJsZWRPcmU=}
 ```
-
-> lYou have successfully pwned Aragog machine.
-> Here is your second hocrux: horcrux_
->{MjogbWFSdm9MbyBHYVVudCdzIHJpTmcgZGVTdHJPeWVkIGJZIERVbWJsZWRPcmU=}

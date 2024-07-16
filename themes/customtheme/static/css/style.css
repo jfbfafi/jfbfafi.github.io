@@ -150,6 +150,19 @@ a:hover {
   margin-top: 0.8em;
 }
 
+.index-blog-description {
+  font-family: 'JetBrainsMono-Regular';
+  color: #50FA7B;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 2.5em;
+}
+
+.index-blog-description ul li {
+  margin-top: 0.8em;
+  list-style: none;
+}
+
 .list-title,
 .post-snippet {
   display: flex;
@@ -163,11 +176,12 @@ a:hover {
 
 .post-snippet {
   margin-top: 0.5em;
+  font-size: larger;
 }
 
 .list-title {
   margin-top: 2em;
-  font-style: italic;
+  font-size: xx-large;
   color: #BD93F9;
 }
 
@@ -190,6 +204,7 @@ a:hover {
 
 pre {
   overflow-x: auto;
+  overflow-y: auto;
   margin: 24px 0 24px 0;
   padding: 5px 0 0 5px;
 }
@@ -198,7 +213,8 @@ pre {
 code {
   font-family: 'JetBrainsMono-Regular';
   font-weight: bolder;
-  overflow-x: hidden;
+  overflow-x: auto;
+  overflow-y: auto;
   padding-top: 2px;
   padding-bottom: 2px;
 }
@@ -240,8 +256,12 @@ blockquote {
   font-style: italic;
   text-shadow: 1px 1px #F1FA8C;
   overflow-x: auto;
+  margin: 24px 0 24px 0;
 }
 
+p {
+  margin: 10px 0 10px 0;
+}
 
 /*404 PAGE*/
 
@@ -262,6 +282,7 @@ blockquote {
   font-family: 'JetBrainsMono-Regular'
 }
 
+
 .not-found-link {
   text-decoration: underline;
   color: #BD93F9;
@@ -273,7 +294,7 @@ blockquote {
 
 /* Responsive section for small screen like mobile devices */
 
-@media screen and (max-width: 662px) {
+@media (max-width: 30em) {
   
   .site-header nav {
     display: flex;
@@ -282,9 +303,13 @@ blockquote {
     margin: 1em 0;
     line-height: 2.5em;
   }
+  
+  nav .title {
+    margin-right: 20px;
+  }
+
 
   .sections a {
-    font-size: 14px;
     text-align: center;
   } 
   
@@ -303,6 +328,11 @@ blockquote {
   }
 
   .index-presentation {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .index-blog-description {
     margin-left: 10px;
     margin-right: 10px;
   }

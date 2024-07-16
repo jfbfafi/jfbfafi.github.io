@@ -20,21 +20,15 @@ theme = 'customtheme'
   
   [[menu.main]]
     identifier = "labs"
-    name = "labs"
+    name = "Labs"
     url = "/labs/"
     weight = 30
   
   [[menu.main]]
-    identifier = "sisops"
-    name = "Sisops"
-    url = "/sisops/"
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
     weight = 40
-
-  [[menu.main]]
-    identifier = "networking"
-    name = "Networking"
-    url = "/networking/"
-    weight = 50
 
 
 
