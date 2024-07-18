@@ -1,5 +1,5 @@
 +++
-title = "Introducción a Sistemas Operativos"
+title = "Intro Sistemas Operativos"
 +++
 
 

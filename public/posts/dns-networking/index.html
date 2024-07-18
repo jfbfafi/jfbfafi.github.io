@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>Writeups |  fafi </title>
+	<title>DNS - Networking |  fafi </title>
     
 
 	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
@@ -60,28 +60,27 @@
 
 
 
-<h3 class="list-title">Writeups</h3>
+<div class="single-content">
+    
+    <h3 class="single-content-title">DNS - Networking</h3>
 
+    <h2 id="qué-es-el-dns">¿Qué es el DNS?</h2>
+<p>El <strong>sistema de nombres de dominio</strong> es un protocolo que se encarga de la traducción de <strong>nombres de dominio</strong> (por ejemplo: amazon.com) a <strong>direcciones IP</strong> entendibles por una computadora (por ejemplo: 192.0.2.44).</p>
+<p>Este protocolo facilita la navegación por internet ya que no hace falta memorizar direcciones IP. Solo con saber el nombre del dominio al que queremos acceder se pueden solicitar los recursos asociados al mismo.</p>
+<p><img src="/images/posts/networking/dns.png" alt="dns diagram"></p>
+<p>El cliente primero busca en su <strong>cache</strong> antes de solicitar al sistema operativo una nueva petición al resolver. En caso de que el cliente no conozca dónde resolver el dominio, realiza dicha petición al S.0. que a su vez revisa su cache para asegurarse de no hacer una solicitud al resolver si ya conoce la IP asociada al dominio. De lo contrario se realiza una nueva petición.</p>
+<p>El resolver usualmente es tu <strong>ISP (Internet Service Provider)</strong> y como muestra el diagrama, este debe saber dónde localizar al <strong>root name server</strong>.</p>
+<h2 id="tipos-de-registros-dns-dns-records">Tipos de registros DNS (DNS records)</h2>
+<h3 id="registro-a">registro A</h3>
+<p>Realiza un mapeo entre una dirección IPv4 y un nombre de dominio.</p>
+<h3 id="registro-aaaa">registro AAAA</h3>
+<p>Realiza un mapeo entre una dirección IPv6 y un nombre de dominio.</p>
+<h3 id="registro-cname-canonical-name-record">registro CNAME (Canonical name record)</h3>
+<p>Alias de un nombre de dominio a otro.</p>
+<h3 id="registro-mx-mail-exchange-record">registro MX (Mail exchange record)</h3>
+<p>Especifica cómo debe ser direccionado un correo electrónico en internet. Los <strong>registros MX</strong> apuntan a los servidores a los cuales envían un correo electrónico, y a cuál de ellos debería ser enviado en primer lugar, por prioridad.</p>
 
-
-
-<article class="post-snippet">
-  <h5>
-    <a href="/writeups/aragog-vulnhub/">aragog - Vulnhub (easy)</a>
-  </h5>
-</article>
-
-<article class="post-snippet">
-  <h5>
-    <a href="/writeups/dawn-vulnhub/">dawn - Vulnhub (easy)</a>
-  </h5>
-</article>
-
-<article class="post-snippet">
-  <h5>
-    <a href="/writeups/suidy-hackmyvm/">suidy - HackMyVM (Easy)</a>
-  </h5>
-</article>
+</div>
 
 
 <footer>

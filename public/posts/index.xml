@@ -8,14 +8,21 @@
     <language>en-us</language>
     <atom:link href="http://localhost:4444/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Introducción a redes de computadoras</title>
+      <title>DNS - Networking</title>
+      <link>http://localhost:4444/posts/dns-networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4444/posts/dns-networking/</guid>
+      <description>¿Qué es el DNS? El sistema de nombres de dominio es un protocolo que se encarga de la traducción de nombres de dominio (por ejemplo: amazon.com) a direcciones IP entendibles por una computadora (por ejemplo: 192.0.2.44).&#xA;Este protocolo facilita la navegación por internet ya que no hace falta memorizar direcciones IP. Solo con saber el nombre del dominio al que queremos acceder se pueden solicitar los recursos asociados al mismo.</description>
+    </item>
+    <item>
+      <title>Intro Networking</title>
       <link>http://localhost:4444/posts/intro-networking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:4444/posts/intro-networking/</guid>
       <description>Qué es una red de computadoras? Una red de computadoras es un conjunto de nodos o dispositivos informáticos interconectados que intercambian datos y recursos entre sí. Puede establecerse utilizando medios por cable o inalámbricos, y protocolos de comunicación como TCP/IP.&#xA;Dispositivos Cliente Un cliente es un componente de hardware o software que se conecta a un servidor y utiliza algunos de sus servicios o recursos disponibles.&#xA;Servidor Un servidor es un componente de hardware o software que procesa peticiones y entrega datos a otro ordenador a través de Internet o de una red local.</description>
     </item>
     <item>
-      <title>Introducción a Sistemas Operativos</title>
+      <title>Intro Sistemas Operativos</title>
       <link>http://localhost:4444/posts/intro-sisops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:4444/posts/intro-sisops/</guid>

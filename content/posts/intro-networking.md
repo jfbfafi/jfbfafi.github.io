@@ -1,5 +1,5 @@
 +++
-title = "Introducción a redes de computadoras"
+title = "Intro Networking"
 +++
 
 

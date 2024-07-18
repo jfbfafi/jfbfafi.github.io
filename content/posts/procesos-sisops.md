@@ -35,7 +35,7 @@ Un programa es un **archivo** que contiene un conjunto de instrucciones compilad
 Es una estructura manejada por el sistema operativo que almacena el **contexto de ejecución de un proceso** y permite identificarlo de otros procesos.
 
 ### Componentes de un PCB:
-- Identificadores (PID, PPID, UID),
+- Identificadores (PID, PPID, UID).
 - Estado de los registros del procesador.
 - Estado (READY,RUNNING, etc).
 - Prioridad de ejecución.
