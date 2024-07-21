@@ -10,6 +10,8 @@
   </url><url>
     <loc>http://localhost:4444/writeups/dawn-vulnhub/</loc>
   </url><url>
+    <loc>http://localhost:4444/posts/dns-networking/</loc>
+  </url><url>
     <loc>http://localhost:4444/labs/grabthephisher-cyberdefenders/</loc>
   </url><url>
     <loc>http://localhost:4444/posts/intro-networking/</loc>
@@ -23,6 +25,8 @@
     <loc>http://localhost:4444/posts/</loc>
   </url><url>
     <loc>http://localhost:4444/posts/procesos-sisops/</loc>
+  </url><url>
+    <loc>http://localhost:4444/labs/redline-cyberdefenders/</loc>
   </url><url>
     <loc>http://localhost:4444/writeups/suidy-hackmyvm/</loc>
   </url><url>

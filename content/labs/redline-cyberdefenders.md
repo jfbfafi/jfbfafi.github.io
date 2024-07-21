@@ -487,7 +487,9 @@ What is the name of the process responsible for the VPN connection?
 
 ##### ***Output del comando***
 
-`python3 vol.py -f /home/fafi/Documents/cyberdefenders/RedLine/MemoryDump.mem windows.pslist`
+```bash
+python3 vol.py -f /home/fafi/Documents/cyberdefenders/RedLine/MemoryDump.mem windows.pslist
+```
 
 ```bash
 68   │ 6724    3580    Outline.exe 0xad818e578080  0   -   1   True    2023-05-21 22:36:09.000000  2023-05-21 23:01:24.000000  Disabled
@@ -672,9 +674,7 @@ What is the full URL of the PHP file that the attacker visited?
 strings MemoryDump.mem | grep -iE "http(|s):\/\/77.91.124.20\/" 
 ```
 
-#### Respuesta
-
-**URL MODIFICADA**
+#### Respuesta (***URL MODIFICADA***)
 
 `hxxp://77[.]91[.]124[.]20/store/games/index.php`
 
