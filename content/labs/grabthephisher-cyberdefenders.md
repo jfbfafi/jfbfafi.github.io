@@ -2,6 +2,8 @@
 title = "GrabThePhisher - Cyberdefenders (Easy)"
 +++
 
+###### Category: Threat Intel
+
 [link del laboratorio GrabThePhisher](https://cyberdefenders.org/blueteam-ctf-challenges/grabthephisher/)
 
 ## Descargar laboratorio y moverlo a la máquina virtual REMnux
@@ -11,6 +13,8 @@ title = "GrabThePhisher - Cyberdefenders (Easy)"
 ```bash
 7z x 95-GrabThePhisher.zip -pcyberdefenders.org
 ```
+---
+
 
 ## Preguntas
 

@@ -2,8 +2,13 @@
 title = "MalDoc101 - Cyberdefenders (Medium)"
 +++
 
+###### Category: Malware Analysis
 
 [link del laboratorio maldoc101](https://cyberdefenders.org/blueteam-ctf-challenges/maldoc101/)
+
+## Herramientas a utilizar
+
+[oledump](https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py)
 
 ## Descargar laboratorio y moverlo a la máquina virtual REMnux
 
@@ -12,6 +17,8 @@ title = "MalDoc101 - Cyberdefenders (Medium)"
 ```bash
 7z x 51-maldoc101.zip -pcyberdefenders.org
 ```
+
+---
 
 ## Preguntas
 

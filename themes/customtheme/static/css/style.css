@@ -14,18 +14,14 @@
 /* LAYOUT */
 
 html {
-  background-color: #161925;
+  background-color: #11111b;
   scroll-behavior: smooth;
-
-}
-
-/* Customizes the scrollbar in Firefox */
-body {
   scrollbar-width: thin;
   /* Can be "auto", "thin", or "none" */
-  scrollbar-color: #222222 #f1f1f1;
+  scrollbar-color: #50FA7B #282A36;
   /* Thumb and track color */
 }
+
 
 ul {
   list-style-position: inside;
@@ -80,7 +76,8 @@ footer {
 }
 
 a:hover {
-  color: #ffcc5c;
+  color: #a6e3a1;
+  font-weight: bold;
 }
 
 .sections a {
@@ -93,7 +90,7 @@ a:hover {
   width: 100%;
   height: 2px;
   border-radius: 2px;
-  background-color:#9fef00;
+  background-color:#c6a0f6;
   bottom: 0;
   left: 0;
   transform-origin: right;
@@ -104,6 +101,7 @@ a:hover {
 .sections a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+  
 }
 
 .title {
@@ -192,6 +190,7 @@ pre {
   overflow-x: auto;
   margin: 24px 0 24px 0;
   padding: 1em;
+  scrollbar-width: thin;
 }
 
 
@@ -230,13 +229,20 @@ h4 {
   margin: 24px 0 24px 0;
 }
 
+h6 {
+  color: #50FA7B;
+  text-shadow: 0.5px 0.5px #50FA7B;
+  font-size: 14px;
+  margin: 24px 0 24px 0;
+}
+
 blockquote {
   border: 2px solid #50FA7B;
   border-radius: 5px;
   padding: 10px;
   margin: 0;
   font-style: italic;
-  text-shadow: 1px 1px #F1FA8C;
+  text-shadow: 0.5px 0.5px #F1FA8C;
   overflow-x: auto;
   margin: 24px 0 24px 0;
 }
@@ -271,7 +277,16 @@ p {
   font-style: oblique;
   text-align: center;
   margin-top: 2em;
-  font-weight: 700;
+  font-size: larger;
+}
+
+.not-found-link a:hover {
+  font-weight: bolder;
+}
+
+hr {
+  margin: 24px 0 5px 0;
+  color: #626880;
 }
 
 /* Responsive section for small screen like mobile devices */

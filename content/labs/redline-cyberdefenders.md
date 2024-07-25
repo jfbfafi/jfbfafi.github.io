@@ -2,17 +2,20 @@
 title = 'RedLine - Cyberdefenders (Easy)'
 +++
 
+###### Category: Endpoint Forensics
 
 [link del laboratorio RedLine](https://cyberdefenders.org/blueteam-ctf-challenges/redline/)
 
 ## Herramientas a utilizar
 
-- [Volatility 2](https://github.com/volatilityfoundation/volatility/releases/tag/2.6.1)
-- [Volatility 3](https://github.com/volatilityfoundation/volatility3)
+[Volatility 2](https://github.com/volatilityfoundation/volatility/releases/tag/2.6.1)
+
+[Volatility 3](https://github.com/volatilityfoundation/volatility3)
 
 ## Recursos 
 
 [Volatility cheatsheet](https://blog.onfvp.com/post/volatility-cheatsheet/)
+
 
 
 ## Descargar laboratorio y moverlo a la máquina virtual REMnux
@@ -22,6 +25,10 @@ title = 'RedLine - Cyberdefenders (Easy)'
 ```bash
 7z x 106-RedLine.zip -pcyberdefenders.org
 ```
+
+---
+
+## Preguntas
 
 ### Q1
 
