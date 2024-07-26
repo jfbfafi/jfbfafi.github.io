@@ -6,6 +6,8 @@ title = 'RedLine - Cyberdefenders (Easy)'
 
 [link del laboratorio RedLine](https://cyberdefenders.org/blueteam-ctf-challenges/redline/)
 
+---
+
 ## Herramientas a utilizar
 
 [Volatility 2](https://github.com/volatilityfoundation/volatility/releases/tag/2.6.1)
@@ -16,7 +18,7 @@ title = 'RedLine - Cyberdefenders (Easy)'
 
 [Volatility cheatsheet](https://blog.onfvp.com/post/volatility-cheatsheet/)
 
-
+---
 
 ## Descargar laboratorio y moverlo a la máquina virtual REMnux
 

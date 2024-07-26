@@ -1,6 +1,10 @@
 +++
-title = 'suidy - HackMyVM (Easy)'
+title = 'suidy - HackMyVM'
 +++
+
+[link de descarga de la máquina suidy](https://downloads.hackmyvm.eu/suidy.zip)
+
+---
 
 ## Descubrimiento de máquina objetivo en la red con nmap
 

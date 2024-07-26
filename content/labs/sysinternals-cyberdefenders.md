@@ -6,7 +6,7 @@ title = 'Sysinternals - Cyberdefenders (Medium)'
 
 [link del laboratorio Sysinternals](https://cyberdefenders.org/blueteam-ctf-challenges/sysinternals/)
 
-
+---
 
 ## Herramientas a utilizar
 

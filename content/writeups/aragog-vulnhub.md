@@ -1,6 +1,12 @@
 +++
-title = "aragog - Vulnhub (easy)"
+title = "aragog - Vulnhub"
 +++
+
+
+[link de descarga de la máquina aragog](https://www.vulnhub.com/entry/harrypotter-aragog-102,688/)
+
+---
+
 
 
 ## Escaneo de red con nmap para descubrir máquina objetivo

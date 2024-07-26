@@ -6,6 +6,8 @@ title = "GrabThePhisher - Cyberdefenders (Easy)"
 
 [link del laboratorio GrabThePhisher](https://cyberdefenders.org/blueteam-ctf-challenges/grabthephisher/)
 
+---
+
 ## Descargar laboratorio y moverlo a la máquina virtual REMnux
 
 ### unzip lab

@@ -6,9 +6,13 @@ title = "MalDoc101 - Cyberdefenders (Medium)"
 
 [link del laboratorio maldoc101](https://cyberdefenders.org/blueteam-ctf-challenges/maldoc101/)
 
+---
+
 ## Herramientas a utilizar
 
 [oledump](https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py)
+
+---
 
 ## Descargar laboratorio y moverlo a la máquina virtual REMnux
 

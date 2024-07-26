@@ -16,7 +16,7 @@
 html {
   background-color: #11111b;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
+  scrollbar-width: auto;
   /* Can be "auto", "thin", or "none" */
   scrollbar-color: #50FA7B #282A36;
   /* Thumb and track color */
