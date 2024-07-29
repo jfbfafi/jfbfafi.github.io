@@ -166,7 +166,7 @@ a:hover {
 .list-title {
   margin-top: 2em;
   font-size: xx-large;
-  color: #BD93F9;
+  color: #9D65FF;
 }
 
 
@@ -201,14 +201,14 @@ code {
 }
 
 :not(pre) > code {
-  color: #c16cfa;
+  color: #FFE900;
 }
 
 /* Images */
 img {
   border: 1px solid #BD93F9;
   max-width: 100%;
-  margin: 24px 0 24px 0;
+  margin: 10px 0 10px 0;
 }
 
 figure {
@@ -286,8 +286,16 @@ p {
 
 hr {
   margin: 24px 0 5px 0;
-  color: #626880;
+  color: #282A36;
 }
+
+/*section title links*/
+
+.section-title-link span{
+  font-weight: bold;
+  color: #9D65FF;
+}
+
 
 /* Responsive section for small screen like mobile devices */
 

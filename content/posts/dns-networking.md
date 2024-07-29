@@ -1,8 +1,8 @@
 +++
-title = "DNS - Networking"
+title = "Protocolo DNS"
 +++
 
-## ¿Qué es el DNS?
+## ¿Qué es el protocolo DNS?
 
 El **sistema de nombres de dominio** es un protocolo que se encarga de la traducción de **nombres de dominio** (por ejemplo: amazon.com) a **direcciones IP** entendibles por una computadora (por ejemplo: 192.0.2.44).
 

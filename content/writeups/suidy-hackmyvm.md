@@ -2,7 +2,7 @@
 title = 'suidy - HackMyVM'
 +++
 
-[link de descarga de la máquina suidy](https://downloads.hackmyvm.eu/suidy.zip)
+[link => suidy](https://downloads.hackmyvm.eu/suidy.zip)
 
 ---
 

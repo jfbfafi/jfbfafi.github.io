@@ -1,5 +1,5 @@
 +++
-title = "Procesos - Sistemas Operativos"
+title = "Procesos"
 +++
 
 

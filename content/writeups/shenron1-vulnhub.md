@@ -2,7 +2,7 @@
 title = 'shenron: 1 - Vulnhub'
 +++
 
-[link de descarga de la máquina shenron: 1](https://www.vulnhub.com/entry/shenron-1,630/)
+[link => shenron: 1](https://www.vulnhub.com/entry/shenron-1,630/)
 
 ---
 

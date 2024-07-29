@@ -3,7 +3,7 @@ title = "dawn - Vulnhub"
 +++
 
 
-[link de descarga de la máquina dawn](https://www.vulnhub.com/entry/sunset-dawn,341/)
+[link => dawn](https://www.vulnhub.com/entry/sunset-dawn,341/)
 
 ---
 

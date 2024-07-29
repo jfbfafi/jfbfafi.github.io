@@ -3,7 +3,7 @@ title = "aragog - Vulnhub"
 +++
 
 
-[link de descarga de la máquina aragog](https://www.vulnhub.com/entry/harrypotter-aragog-102,688/)
+[link => aragog](https://www.vulnhub.com/entry/harrypotter-aragog-102,688/)
 
 ---
 
