@@ -263,12 +263,13 @@ Exportar archivo UsrClass.dat con FTK Imager y abrir con herramienta ShellBagsEx
 ### Q10
 
 
-A Windows password hashes for an account are below. What is the user's password? Anon:1001:aad3b435b51404eeaad3b435b51404ee:3DE1A36F6DDB8E036DFD75E8E20C4AF4::: 
+A Windows password hashes for an account are below. What is the user's password?  
 
-A continuación se muestra el hash de una contraseña de Windows para una cuenta. ¿Cuál es la contraseña del usuario? Anon:1001:aad3b435b51404eeaad3b435b51404ee:3DE1A36F6DDB8E036DFD75E8E20C4AF4:::
+A continuación se muestra el hash de una contraseña de Windows para una cuenta. ¿Cuál es la contraseña del usuario? 
 
-[hashes.com](https://hashes.com/en/decrypt/hash)
-
+```bash
+Anon:1001:aad3b435b51404eeaad3b435b51404ee:3DE1A36F6DDB8E036DFD75E8E20C4AF4::: 
+```
 
 ![AfricanFalls 15](/images/labs/cyberdefenders/africanfalls/africanfalls15.png)
 
