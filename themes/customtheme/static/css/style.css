@@ -106,9 +106,10 @@ a:hover {
 
 .title {
   margin-right: auto;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   font-style: italic;
+  text-shadow: 1px 1px #50fa7b;
 }
 
 
@@ -182,6 +183,7 @@ a:hover {
 }
 
 .single-content-title {
+  font-size: 1.4em;
   margin-top: 50px;
   color: #FF206E;
 }
@@ -364,6 +366,10 @@ hr {
     min-width: 100px;
     padding: 0;
   }
-  
-  
+}
+
+@media (width <= 510px) {
+    .sections a {
+      margin-top: 10px;
+    }
 }
