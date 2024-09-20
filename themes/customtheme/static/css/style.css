@@ -45,7 +45,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: 5em;
+  margin-top: 4em;
 }
 
 .footer-github {
@@ -307,8 +307,6 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1em 0;
-    line-height: 2.5em;
   }
   
   nav .title {
@@ -368,7 +366,7 @@ hr {
   }
 }
 
-@media (width <= 510px) {
+@media (width <= 450px) {
     .sections a {
       margin-top: 10px;
     }
