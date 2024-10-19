@@ -562,7 +562,9 @@ MSG      0.000 feroxbuster::heuristics detected directory listing: http://10.38.
 
 ## Credenciales encontradas en archivo system.log
 
+```txt
 Ruta -> 10.38.1.13/election/admin/logs/system.log
+```
 
 ```bash
 ───────┬────────────────────────────────────────────────────────────────────────────────────────────────────────
