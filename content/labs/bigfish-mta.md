@@ -32,7 +32,7 @@ What happened (when, who, what).
 
 Qué ocurrió (cuándo, quién, qué).
 
-Se generó un envento en el que un equipo fue infectado con el malware Koi Stealer el dia y horario **2024-09-04 17:35 UTC**.
+Se generó un evento en el que un equipo fue infectado con el malware **Koi Stealer** el dia y hora **2024-09-04 17:35 UTC**.
 
 ## Victim Details 
 
